@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_success"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="cn.edu.njnu.bomb_login_reg.SuccessActivity">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/return_main"
+        android:text="返回登录"
+        android:layout_below="@+id/showUser"
+        android:layout_alignParentStart="true"
+        android:textColor="@android:color/white"
+        android:background="@drawable/button_shape"
+        android:layout_marginTop="25dp"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+    android:id="@+id/showUser"
+    android:text="内容页！"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/return_reset"
+        android:text="重置密码"
+        android:textColor="@android:color/white"
+        android:background="@drawable/button_shape"
+        android:layout_below="@+id/return_main"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="29dp"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="退出"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="29dp"
+        android:id="@+id/logout"
+        android:layout_below="@+id/return_reset"
+        android:textColor="@android:color/white"
+        android:background="@drawable/button_shape"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+</RelativeLayout>

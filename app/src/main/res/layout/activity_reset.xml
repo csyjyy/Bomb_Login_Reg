@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <EditText
+        android:id="@+id/userName_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="手机号码"
+        android:layout_marginTop="100dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:inputType="number"
+        android:maxLength="11"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/passWord_et"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="新密码"
+            android:layout_marginLeft="20dp"
+            android:inputType="textPassword"
+            android:layout_weight="1"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/Verity_et"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="验证码"
+            android:layout_marginLeft="20dp"
+            android:inputType="number"
+            android:layout_weight="1"
+            />
+
+        <Button
+            android:id="@+id/Message_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:text="获取验证码"
+            android:textSize="14sp"
+            android:layout_marginRight="20dp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/button_shape"
+            android:layout_gravity="center"
+            android:clickable="true"
+            />
+    </LinearLayout>
+    <Button
+        android:id="@+id/Reset_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="重置密码"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="50dp"
+        android:background="@drawable/button_style"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="30dp"/>
+    <RelativeLayout
+        android:id="@+id/rl_keyboard"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <!--
+        没有这两个属性，按键上文字会发虚模糊
+    android:shadowColor="#FFFFFF"
+    android:shadowRadius="0.0"-->
+        <android.inputmethodservice.KeyboardView
+            android:id="@+id/keyboard_view"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="#ECECEC"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:keyBackground="@drawable/btn_keyboard_key"
+            android:keyPreviewHeight="100dp"
+            android:keyPreviewLayout="@layout/key_preview_layout"
+            android:keyPreviewOffset="50dp"
+            android:keyTextColor="#4F4F4F"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:shadowColor="#FFFFFF"
+            android:shadowRadius="0.0" />
+
+        <LinearLayout
+            android:id="@+id/llController"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/keyboard_view"
+            android:background="#ECECEC"
+            android:orientation="horizontal"
+            android:paddingLeft="5dp"
+            android:paddingRight="15dp">
+
+            <TextView
+                android:id="@+id/tvSystemKeyboard"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingBottom="0dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="5dp"
+                android:text="切换系统输入法"
+                android:textColor="#4F4F4F"
+                android:textSize="18dp" />
+
+            <RadioGroup
+                android:id="@+id/rgChangeKeyboard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_digit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:paddingBottom="0dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="5dp"
+                    android:text="数字"
+                    android:textColor="@drawable/selector_radiobutton_text"
+                    android:textSize="18dp" />
+
+                <RadioButton
+                    android:id="@+id/rb_letter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:paddingBottom="0dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="5dp"
+                    android:text="字母"
+                    android:textColor="@drawable/selector_radiobutton_text"
+                    android:textSize="18dp" />
+
+                <RadioButton
+                    android:id="@+id/rb_symbol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:paddingBottom="0dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="5dp"
+                    android:text="符号"
+                    android:textColor="@drawable/selector_radiobutton_text"
+                    android:textSize="18dp" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_above="@id/llController"
+            android:background="#A9A9A9" />
+    </RelativeLayout>
+</LinearLayout>
